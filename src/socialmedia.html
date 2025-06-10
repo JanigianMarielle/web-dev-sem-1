@@ -1,0 +1,40 @@
+<body>
+    <a href="tech.html"><h1>socialmedia</h1></a>
+  </body>
+  
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Social Media</title>
+      <link rel="stylesheet" href="style.css" />
+      <!-- Link to CSS -->
+    </head>
+    <body>
+
+      <script type="module">
+        import { getNames } from './getnames.js';
+        let names = [];
+  
+        window.addEventListener('DOMContentLoaded', async () => {
+          names = await getNames("sewing");
+          const p = document.getElementById("Names");
+          p.textContent = names.join(`\n`);
+          console.log(names.join(`\n`));
+          p.style.whiteSpace = "pre-wrap";
+        })
+  
+      </script>
+
+
+      <!-- Subcategory Navigation Bar (same as in home_services.html) -->
+      <nav class="subcategory-nav">
+        <ul>
+          <li><a href="computers.html" class="nav-menu">Computers</a></li>
+          <li><a href="coding.html" class="nav-menu">Coding</a></li>
+          <li><a href="socialmedia.html" class="nav-menu">Social Media</a></li>
+        </ul>
+      </nav>
+    </body>
+  </html>  

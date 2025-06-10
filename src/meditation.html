@@ -1,0 +1,80 @@
+<body>
+    <a href="health.html"><h1>meditation</h1></a>
+  </body>
+  
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Walking</title>
+      <link rel="stylesheet" href="style.css" />
+      <!-- Link to CSS -->
+    </head>
+    <body>
+
+
+      <script type="module">
+        import { getNames } from './getnames.js';
+        let names = [];
+  
+        window.addEventListener('DOMContentLoaded', async () => {
+          names = await getNames("meditation");
+          const p = document.getElementById("Names");
+          p.textContent = names.join(`\n`);
+          console.log(names.join(`\n`));
+          p.style.whiteSpace = "pre-wrap";
+        })
+  
+      </script>
+
+
+      <!-- Subcategory Navigation Bar (same as in home_services.html) -->
+      <nav class="subcategory-nav">
+        <ul>
+          <li><a href="walking.html" class="nav-menu">Walking</a></li>
+          <li><a href="meditation.html" class="nav-menu">Meditation</a></li>
+          <li><a href="dancing.html" class="nav-menu">Dancing</a></li>
+        </ul>
+      </nav>
+    </body>
+  </html>
+
+
+
+
+
+
+
+
+
+  <body>
+    <a href="art.html"><h1>sewing</h1></a>
+  </body>
+  
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Sewing</title>
+      <link rel="stylesheet" href="style.css" />
+      <!-- Link to CSS -->
+    </head>
+    <body>
+
+
+      
+
+
+
+      <!-- Subcategory Navigation Bar (same as in home_services.html) -->
+      <nav class="subcategory-nav">
+        <ul>
+          <li><a href="painting.html" class="nav-menu">Painting</a></li>
+          <li><a href="crafting.html" class="nav-menu">Crafting</a></li>
+          <li><a href="sewing.html" class="nav-menu">Sewing</a></li>
+        </ul>
+      </nav>
+    </body>
+  </html>  

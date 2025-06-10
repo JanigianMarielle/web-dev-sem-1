@@ -1,0 +1,42 @@
+<body>
+    <a href="wrench.html"><h1>plumbing</h1></a>
+  </body>
+  
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Plumbing</title>
+      <link rel="stylesheet" href="style.css" />
+      <!-- Link to CSS -->
+    </head>
+    <body>
+
+
+      <script type="module">
+        import { getNames } from './getnames.js';
+        let names = [];
+  
+        window.addEventListener('DOMContentLoaded', async () => {
+          names = await getNames("plumbing");
+          const p = document.getElementById("Names");
+          p.textContent = names.join(`\n`);
+          console.log(names.join(`\n`));
+          p.style.whiteSpace = "pre-wrap";
+        })
+  
+      </script>
+
+
+
+      <!-- Subcategory Navigation Bar (same as in home_services.html) -->
+      <nav class="subcategory-nav">
+        <ul>
+          <li><a href="construction.html" class="nav-menu">Construction</a></li>
+          <li><a href="plumbing.html" class="nav-menu">Plumbing</a></li>
+          <li><a href="gardening.html" class="nav-menu">Gardening</a></li>
+        </ul>
+      </nav>
+    </body>
+  </html>

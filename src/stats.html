@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Art</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Link to CSS -->
+  </head>
+  <body>
+
+
+    <script type="module">
+      import { getNamesMC } from './getnames.js';
+      let names = [];
+
+      window.addEventListener('DOMContentLoaded', async () => {
+        names = await getNamesMC(["finance", "buisness", "investing"]);
+        const p = document.getElementById("Names");
+        p.textContent = names.join(`\n`);
+        console.log(names.join(`\n`));
+        p.style.whiteSpace = "pre-wrap";
+      })
+
+    </script>
+
+    <a href="index.html"><h1>stats</h1></a>
+
+    <!-- Subcategory Navigation Bar -->
+    <nav class="subcategory-nav">
+      <ul>
+        <li><a href="finance.html" class="nav-menu">Finance</a></li>
+        <li><a href="buisness.html" class="nav-menu">Buisness</a></li>
+        <li><a href="investing.html" class="nav-menu">Investing</a></li>
+      </ul>
+    </nav>
+
+    <h1></h1>
+    <p id="Names"></p>
+
+  </body>
+</html>

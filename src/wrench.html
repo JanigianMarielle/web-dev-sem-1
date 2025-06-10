@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home and Utility</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Link to CSS -->
+  </head>
+  <body>
+
+    <script type="module">
+      import { getNamesMC } from './getnames.js';
+      let names = [];
+
+      window.addEventListener('DOMContentLoaded', async () => {
+        names = await getNamesMC(["painting", "crafting", "sewing"]);
+        const p = document.getElementById("Names");
+        p.textContent = names.join(`\n`);
+        console.log(names.join(`\n`));
+        p.style.whiteSpace = "pre-wrap";
+      })
+
+    </script>
+
+
+    <a href="index.html"><h1>Home and Utility</h1></a>
+
+    <!-- Subcategory Navigation Bar -->
+    <nav class="subcategory-nav">
+      <ul>
+        <li><a href="construction.html" class="nav-menu">Construction</a></li>
+        <li><a href="plumbing.html" class="nav-menu">Plumbing</a></li>
+        <li><a href="gardening.html" class="nav-menu">Gardening</a></li>
+      </ul>
+    </nav>
+
+    <h1></h1>
+    <p id="Names"></p>
+
+  </body>
+</html>
