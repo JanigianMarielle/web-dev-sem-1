@@ -83,6 +83,9 @@ import { addUser, db } from './db.js'
 import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.8.0/firebase-auth.js";
 import { doc, getDoc } from "https://www.gstatic.com/firebasejs/11.8.0/firebase-firestore.js";
 
+let userName = "";
+
+try {
   document.getElementById("signup").addEventListener('click', async () => {
     const email = emailInput.value
     const password = passwordInput.value
@@ -134,10 +137,12 @@ import { doc, getDoc } from "https://www.gstatic.com/firebasejs/11.8.0/firebase-
       })
 
   })
+}
+catch {}
   
 import { setPersistence, browserSessionPersistence, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.8.0/firebase-auth.js";
 
-
+try {
   document.querySelector('#signin').addEventListener('click', async () => {
     const email = emailInput.value;
     const password = passwordInput.value;
@@ -173,6 +178,9 @@ import { setPersistence, browserSessionPersistence, signInWithEmailAndPassword }
         console.log("3"); // Use .data() to get the document's data
         console.log("docSnap data:", userData);
         document.getElementById("helloName").innerHTML = `Hello, ${userData.firstName}`;
+        userName = userData.firstName + " " + userData.lastName;
+        console.log(userName);
+
       } else {
         console.log("No such document!");
         document.getElementById("helloName").innerHTML = "Hello, Guest";
@@ -186,6 +194,9 @@ import { setPersistence, browserSessionPersistence, signInWithEmailAndPassword }
     }
   });
   
+} catch {}
+
+try {
   document.querySelector('#logout').addEventListener('click', () => {
     logOut()
       .then(() => {
@@ -195,6 +206,7 @@ import { setPersistence, browserSessionPersistence, signInWithEmailAndPassword }
         statusText.textContent = `Error: ${err.message}`
       })
   })
+} catch {}
 
 
   // document.addEventListener("DOMContentLoaded", () => {
@@ -230,4 +242,4 @@ import { setPersistence, browserSessionPersistence, signInWithEmailAndPassword }
   // });
 
 
- 
+ export { userName }
