@@ -1,14 +1,13 @@
-import { collection, addDoc, doc, setDoc, getDoc, getDocs, serverTimestamp, query, where } from "https://www.gstatic.com/firebasejs/11.8.0/firebase-firestore.js";
+import { collection, addDoc, doc, setDoc, getDoc, getDocs, serverTimestamp, query, where, orderBy } from "https://www.gstatic.com/firebasejs/11.8.0/firebase-firestore.js";
 import { db } from "/src/firebasee.js"
 
-export async function addUser(firstName, lastName, email, uid, categories) {
+export async function addUser(firstName, lastName, email, uid) {
     const user = {
       firstName: firstName,
       lastName: lastName,
       email: email,
       uid: uid,
       createdAt: serverTimestamp(),
-      categories: categories,
     };
   
     try {
@@ -27,4 +26,4 @@ export async function getUsers() {
     });
   }
 
-  export { collection, addDoc, getDocs, getDoc, serverTimestamp, doc, db, query, where }
+  export { collection, addDoc, getDocs, getDoc, serverTimestamp, doc, db, query, where, orderBy }

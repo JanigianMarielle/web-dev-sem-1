@@ -1,7 +1,4 @@
-<body>
-    <a href="tech.html"><h1>Social Media</h1></a>
-  </body>
-  
+
   <!DOCTYPE html>
   <html lang="en">
     <head>
@@ -12,21 +9,7 @@
       <!-- Link to CSS -->
     </head>
     <body>
-
-      <script type="module">
-        import { getNames } from './getnames.js';
-        let names = [];
-  
-        window.addEventListener('DOMContentLoaded', async () => {
-          names = await getNames("sewing");
-          const p = document.getElementById("Names");
-          p.textContent = names.join(`\n`);
-          console.log(names.join(`\n`));
-          p.style.whiteSpace = "pre-wrap";
-        })
-  
-      </script>
-
+ <a href="tech.html"><h1 id='category'>Social Media</h1></a>
 
       <!-- Subcategory Navigation Bar (same as in home_services.html) -->
       <nav class="subcategory-nav">
@@ -36,5 +19,29 @@
           <li><a href="socialmedia.html" class="nav-menu">Social Media</a></li>
         </ul>
       </nav>
+
+       <!-- COPY THIS -->
+       <button id="addPostBtn">+</button>
+
+       <div id="postsContainer"></div>
+     
+       <div class="modal" id="modal">
+         <div class="modal-content">
+           <button class="close-btn" id="closeModal">&times;</button>
+           <h3>New Post</h3>
+           <label for="postTitle">Title</label>
+           <input type="text" id="postTitle" placeholder="Enter title">
+     
+           <label for="postContent">Content</label>
+           <textarea id="postContent" rows="4" placeholder="Enter content"></textarea>
+     
+           <button id="submitPost">Add Post</button>
+         </div>
+       </div>
+     
+     <script type="module" src="./makepost.js" ></script>
+     <script type="module" src="./getposts.js" ></script>
+     <!-- FINISH COPY -->
+      
     </body>
   </html>  

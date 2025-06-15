@@ -1,7 +1,4 @@
-<body>
-    <a href="bookpage.html"><h1>Education</h1></a>
-  </body>
-  
+
   <!DOCTYPE html>
   <html lang="en">
     <head>
@@ -12,6 +9,7 @@
       <!-- Link to CSS -->
     </head>
     <body>
+      <a href="bookpage.html"><h1 id="category">Writing</h1></a>
       <!-- Subcategory Navigation Bar (same as in home_services.html) -->
       <nav class="subcategory-nav">
         <ul>
@@ -20,6 +18,31 @@
           <li><a href="writing.html" class="nav-menu">Writing</a></li>
         </ul>
       </nav>
+
+
+ <!-- COPY THIS -->
+ <button id="addPostBtn">+</button>
+
+ <div id="postsContainer"></div>
+
+ <div class="modal" id="modal">
+   <div class="modal-content">
+     <button class="close-btn" id="closeModal">&times;</button>
+     <h3>New Post</h3>
+     <label for="postTitle">Title</label>
+     <input type="text" id="postTitle" placeholder="Enter title">
+
+     <label for="postContent">Content</label>
+     <textarea id="postContent" rows="4" placeholder="Enter content"></textarea>
+
+     <button id="submitPost">Add Post</button>
+   </div>
+ </div>
+
+<script type="module" src="./makepost.js" ></script>
+<script type="module" src="./getposts.js" ></script>
+<!-- FINISH COPY -->
+
     </body>
   </html>
   

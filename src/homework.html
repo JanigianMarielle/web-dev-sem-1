@@ -1,23 +1,7 @@
-<body>
-    <a href="bookpage.html"><h1>Education</h1></a>
-  </body>
-  
   <!DOCTYPE html>
   <html lang="en">
     <head>
-      <meta charset="UTF-8" /><script type="module">
-        import { getNames } from './getnames.js';
-        let names = [];
-  
-        window.addEventListener('DOMContentLoaded', async () => {
-          names = await getNames("sewing");
-          const p = document.getElementById("Names");
-          p.textContent = names.join(`\n`);
-          console.log(names.join(`\n`));
-          p.style.whiteSpace = "pre-wrap";
-        })
-  
-      </script>
+      <meta charset="UTF-8" />
 
 
 
@@ -27,6 +11,7 @@
       <!-- Link to CSS -->
     </head>
     <body>
+      <a href="bookpage.html"><h1 id='category'>Education</h1></a>
 
 
 
@@ -35,7 +20,33 @@
         <ul>
           <li><a href="reading.html" class="nav-menu">Reading</a></li>
           <li><a href="homework.html" class="nav-menu">Homework</a></li>
+          <li><a href="writing.html" class="nav-menu">Writing</a></li>
         </ul>
       </nav>
+
+
+       <!-- COPY THIS -->
+    <button id="addPostBtn">+</button>
+
+    <div id="postsContainer"></div>
+  
+    <div class="modal" id="modal">
+      <div class="modal-content">
+        <button class="close-btn" id="closeModal">&times;</button>
+        <h3>New Post</h3>
+        <label for="postTitle">Title</label>
+        <input type="text" id="postTitle" placeholder="Enter title">
+  
+        <label for="postContent">Content</label>
+        <textarea id="postContent" rows="4" placeholder="Enter content"></textarea>
+  
+        <button id="submitPost">Add Post</button>
+      </div>
+    </div>
+  
+  <script type="module" src="./makepost.js" ></script>
+  <script type="module" src="./getposts.js" ></script>
+  <!-- FINISH COPY -->
+
     </body>
   </html>  

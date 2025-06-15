@@ -9,34 +9,39 @@
   </head>
   <body>
 
-
-    <script type="module">
-      import { getNamesMC } from './getnames.js';
-      let names = [];
-
-      window.addEventListener('DOMContentLoaded', async () => {
-        names = await getNamesMC(["finance", "buisness", "investing"]);
-        const p = document.getElementById("Names");
-        p.textContent = names.join(`\n`);
-        console.log(names.join(`\n`));
-        p.style.whiteSpace = "pre-wrap";
-      })
-
-    </script>
-
-    <a href="../index.html"><h1>Stats</h1></a>
+    <a href="../index.html"><h1 id='category'>Stats</h1></a>
 
     <!-- Subcategory Navigation Bar -->
     <nav class="subcategory-nav">
       <ul>
-        <li><a href="finance.html" class="nav-menu">Finance</a></li>
-        <li><a href="buisness.html" class="nav-menu">Buisness</a></li>
-        <li><a href="investing.html" class="nav-menu">Investing</a></li>
+        <li><a href="finance.html" class="nav-menu" id="sub1">Finance</a></li>
+        <li><a href="buisness.html" class="nav-menu" id="sub2">Business</a></li>
+        <li><a href="investing.html" class="nav-menu" id="sub3">Investing</a></li>
       </ul>
     </nav>
 
-    <h1></h1>
-    <p id="Names"></p>
+      <!-- COPY THIS -->
+      <button id="addPostBtn">+</button>
+
+      <div id="postsContainer"></div>
+    
+      <div class="modal" id="modal">
+        <div class="modal-content">
+          <button class="close-btn" id="closeModal">&times;</button>
+          <h3>New Post</h3>
+          <label for="postTitle">Title</label>
+          <input type="text" id="postTitle" placeholder="Enter title">
+    
+          <label for="postContent">Content</label>
+          <textarea id="postContent" rows="4" placeholder="Enter content"></textarea>
+    
+          <button id="submitPost">Add Post</button>
+        </div>
+      </div>
+    
+    <script type="module" src="./makepost.js" ></script>
+    <script type="module" src="./getposts.js" ></script>
+    <!-- FINISH COPY -->
 
   </body>
 </html>

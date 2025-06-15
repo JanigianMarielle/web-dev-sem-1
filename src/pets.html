@@ -1,0 +1,49 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pets</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Link to CSS -->
+  </head>
+  <body>
+
+    <a href="../index.html"><h1 id="category">Pets</h1></a>
+
+    <!-- Subcategory Navigation Bar -->
+    <nav class="subcategory-nav">
+      <ul>
+        <li><a href="dogs.html" class="nav-menu" id="sub1">Dogs</a></li>
+        <li><a href="cats.html" class="nav-menu" id="sub2">Cats</a></li>
+        <li><a href="birds.html" class="nav-menu" id="sub3">Birds</a></li>
+      </ul>
+    </nav>
+
+
+    <!-- COPY THIS -->
+      <button id="addPostBtn">+</button>
+
+  <div id="postsContainer"></div>
+
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <button class="close-btn" id="closeModal">&times;</button>
+      <h3>New Post</h3>
+      <label for="postTitle">Title</label>
+      <input type="text" id="postTitle" placeholder="Enter title">
+
+      <label for="postContent">Content</label>
+      <textarea id="postContent" rows="4" placeholder="Enter content"></textarea>
+
+      <button id="submitPost">Add Post</button>
+    </div>
+  </div>
+
+<script type="module" src="./makepost.js" ></script>
+<script type="module" src="./getposts.js" ></script>
+<!-- FINISH COPY -->
+  </body>
+</html>
