@@ -579,8 +579,8 @@ border-radius: 8px;
   text-decoration: none;
   color: #333; /* Dark text */
   font-weight: bold;
-  padding: 8px 15px;
-  border-radius: 50px; /* Bubble shape */
+  padding: 10px 20px;
+  border-radius: 2px; /* Bubble shape */
   background-color: white !important; /* Ensure the bubbles are filled with white */
   border: 2px solid white !important; /* Optional: Keep the white border */
   transition: background-color 0.3s ease, color 0.3s ease;
