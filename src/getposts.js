@@ -1,6 +1,6 @@
 
-  import { addUser, getUsers, getDoc, collection, addDoc, getDocs, doc, db, serverTimestamp, query, where, orderBy } from '/src/db.js'
-import { addPost } from '/src/makepost.js';
+  import { addUser, getUsers, getDoc, collection, addDoc, getDocs, doc, db, serverTimestamp, query, where, orderBy } from './db.js'
+import { addPost } from './makepost.js';
 
   export async function getPosts(main) {
     const postsRef = collection(db, "posts");

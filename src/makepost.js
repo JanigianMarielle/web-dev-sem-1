@@ -1,4 +1,4 @@
-import {userName} from "/src/index.js";
+import {userName} from "./index.js";
 import { db } from './db.js';
 import { doc, getDoc, setDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/11.8.0/firebase-firestore.js";
 
