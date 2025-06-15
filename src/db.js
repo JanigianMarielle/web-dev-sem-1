@@ -1,5 +1,5 @@
 import { collection, addDoc, doc, setDoc, getDoc, getDocs, serverTimestamp, query, where, orderBy } from "https://www.gstatic.com/firebasejs/11.8.0/firebase-firestore.js";
-import { db } from "/src/firebasee.js"
+import { db } from "src/firebasee.js"
 
 export async function addUser(firstName, lastName, email, uid) {
     const user = {
