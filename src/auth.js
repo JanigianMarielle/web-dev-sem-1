@@ -1,6 +1,6 @@
 import { setPersistence, browserSessionPersistence, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, } from "https://www.gstatic.com/firebasejs/11.8.0/firebase-auth.js";
-import { auth, onAuthStateChanged } from 'src/firebasee.js'
-import { doc, getDoc } from "src/db.js";
+import { auth, onAuthStateChanged } from './firebasee.js'
+import { doc, getDoc } from "./db.js";
 let userName = "";
 
 export function signUp(email, password) {
